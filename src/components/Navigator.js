@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
+
 import React from 'react';
 import {
   HashRouter as Router,
@@ -5,7 +7,7 @@ import {
   Routes,
   Link,
 } from 'react-router-dom';
-import Profile from'./Profile';
+import Profile from './Profile';
 import './Navigator.css';
 
 const toggleActive = (e) => {
@@ -22,7 +24,7 @@ const Navigator = () => (
   <Router>
     <div className="main">
       <div className="header">
-        <h1>Space Travellers' Hub</h1>
+        <h1>Space Travellers&apos; Hub</h1>
         <ul className="menu-items">
           <li>
             <a href="#" onClick={toggleActive} className="link">Rockets</a>
