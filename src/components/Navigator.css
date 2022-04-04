@@ -1,6 +1,10 @@
 .header {
   display: flex;
   align-items: center;
+  padding: 0 2rem;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+  -webkit-background-clip: padding-box; /* for Safari */
+  background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
 }
 
 .menu-items {
@@ -19,5 +23,25 @@
 
 .link {
   text-decoration: none;
-  color: blue;
+  color: rgb(70, 147, 240);
+}
+
+.title {
+  flex-grow: 1;
+}
+
+.vertical-line {
+  border-left: 2px solid black;
+  height: 80%;
+  align-self: center;
+}
+
+.menu-items li {
+  display: flex;
+  align-items: center;
+}
+
+#logo {
+  width: 4rem;
+  margin-right: 1rem;
 }

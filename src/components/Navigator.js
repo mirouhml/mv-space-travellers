@@ -24,13 +24,17 @@ const Navigator = () => (
   <Router>
     <div className="main">
       <div className="header">
-        <h1>Space Travellers&apos; Hub</h1>
+        <img src="https://user-images.githubusercontent.com/20567503/161595022-dd594e3e-cadc-465c-8cbb-38d0467b2da5.png" alt="Website logo" id="logo" />
+        <h1 className="title">Space Travellers&apos; Hub</h1>
         <ul className="menu-items">
           <li>
             <a href="#" onClick={toggleActive} className="link">Rockets</a>
           </li>
           <li>
             <a href="#" onClick={toggleActive} className="link">Missions</a>
+          </li>
+          <li>
+            <div className="vertical-line"></div>
           </li>
           <li className="active">
             <Link to="/" id="profile" onClick={toggleActive} className="link">My Profile</Link>
