@@ -34,7 +34,7 @@ const Navigator = () => (
             <a href="#" onClick={toggleActive} className="link">Missions</a>
           </li>
           <li>
-            <div className="vertical-line"></div>
+            <div className="vertical-line" />
           </li>
           <li className="active">
             <Link to="/" id="profile" onClick={toggleActive} className="link">My Profile</Link>
