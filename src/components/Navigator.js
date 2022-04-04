@@ -29,7 +29,7 @@ const Navigator = () => (
         <h1 className="title">Space Travellers&apos; Hub</h1>
         <ul className="menu-items">
           <li>
-          <Link to="/rockets" id="rockets" onClick={toggleActive} className="link">Rockets</Link>
+            <Link to="/rockets" id="rockets" onClick={toggleActive} className="link">Rockets</Link>
           </li>
           <li>
             <a href="#" onClick={toggleActive} className="link">Missions</a>
