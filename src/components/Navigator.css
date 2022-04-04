@@ -1,0 +1,23 @@
+.header {
+  display: flex;
+  align-items: center;
+}
+
+.menu-items {
+  display: flex;
+  list-style-type: none;
+  gap: 1rem;
+}
+
+.inactive {
+  text-decoration: none;
+}
+
+.active {
+  text-decoration: underline;
+}
+
+.link {
+  text-decoration: none;
+  color: blue;
+}
