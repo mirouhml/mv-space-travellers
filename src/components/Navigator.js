@@ -28,8 +28,8 @@ const Navigator = () => (
         <img src="https://user-images.githubusercontent.com/20567503/161595022-dd594e3e-cadc-465c-8cbb-38d0467b2da5.png" alt="Website logo" id="logo" />
         <h1 className="title">Space Travellers&apos; Hub</h1>
         <ul className="menu-items">
-          <li>
-            <Link to="/rockets" id="rockets" onClick={toggleActive} className="link">Rockets</Link>
+          <li className="active">
+            <Link to="/" id="rockets" onClick={toggleActive} className="link">Rockets</Link>
           </li>
           <li>
             <a href="#" onClick={toggleActive} className="link">Missions</a>
@@ -37,14 +37,14 @@ const Navigator = () => (
           <li>
             <div className="vertical-line" />
           </li>
-          <li className="active">
-            <Link to="/" id="profile" onClick={toggleActive} className="link">My Profile</Link>
+          <li>
+            <Link to="/profile" id="profile" onClick={toggleActive} className="link">My Profile</Link>
           </li>
         </ul>
       </div>
       <Routes>
-        <Route path="/" element={<Profile />} />
-        <Route path="/rockets" element={<Rockets />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/" element={<Rockets />} />
       </Routes>
     </div>
   </Router>
