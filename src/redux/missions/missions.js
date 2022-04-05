@@ -2,6 +2,7 @@ import fetchMissions from '../../services/FetchMissions';
 
 const GET_MISSIONS = 'GET_MISSIONS';
 const JOIN = 'JOIN_MISSIONS';
+const CANCEL = 'CANCEL_MISSIONS';
 
 const getMissions = () => async (dispatch) => {
   try {
@@ -12,6 +13,7 @@ const getMissions = () => async (dispatch) => {
         id: mission.mission_id,
         name: mission.mission_name,
         description: mission.description,
+        joined: false,
       });
     });
     dispatch({
@@ -36,7 +38,12 @@ const reducer = (missions = [], action) => {
     case JOIN:
       return missions.map((mission) => {
         if (mission.id !== action.id) return mission;
-        return { ...mission, reserved: true };
+        return { ...mission, joined: true };
+      });
+    case CANCEL:
+      return missions.map((mission) => {
+        if (mission.id !== action.id) return mission;
+        return { ...mission, joined: false };
       });
     default: return missions;
   }
