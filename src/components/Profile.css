@@ -1,0 +1,32 @@
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.profile {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 50% 50%;
+  gap: 1rem;
+  padding: 0;
+  width: 80%;
+  box-sizing: border-box;
+}
+
+.my-rockets {
+  list-style-type: none;
+  padding: 0;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.my-rockets li {
+  padding: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.my-rockets li:last-child {
+  border: 0;
+}
