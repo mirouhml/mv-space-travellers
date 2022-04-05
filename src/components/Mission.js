@@ -11,6 +11,7 @@ const Mission = (mission) => {
 
   const handleSubmit = (e) => {
     if (joined) {
+      console.log('you clicked me');
       e.target.classList.removed('not-joined');
       e.target.classList.add('joined');
       joinMission(id);
@@ -22,7 +23,7 @@ const Mission = (mission) => {
       <td>{name}</td>
       <td>{description}</td>
       <td><p>NOT A MEMBER</p></td>
-      <td><button className="btn" onClick={handleSubmit} type="button">Join Mission</button></td>
+      <td><button className="btn" onClick={handleSubmit()} type="button">Join Mission</button></td>
     </tr>
   );
 };
