@@ -6,7 +6,7 @@ const getRockets = () => async (dispatch) => {
   try {
     const res = await fetchRockets();
     const rockets = [];
-    res.data.forEach( (rocket) => {
+    res.data.forEach((rocket) => {
       rockets.push({
         id: rocket.rocket_id,
         name: rocket.rocket_name,

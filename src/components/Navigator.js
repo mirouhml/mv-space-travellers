@@ -52,6 +52,6 @@ const Navigator = () => {
       </div>
     </Router>
   );
-}
+};
 
 export default Navigator;

@@ -1,21 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { getRockets } from '../redux/rockets/rockets'
+import { getRockets } from '../redux/rockets/rockets';
 
 const Rockets = (props) => {
   const [rockets, setRockets] = useState([]);
   const rocketsInit = useSelector((state) => state.rockets);
   const dispatch = useDispatch();
 
-  useEffect(() =>{
-    if (!props.rocketsFetched) {
+  useEffect(() => {
+    const [rocketsFetched, setRocketsFetched] = props;
+    if (!rocketsFetched) {
       dispatch(getRockets());
-      props.setRocketsFetched(true);
+      setRocketsFetched(true);
     }
   }, [dispatch, props]);
 
   useEffect(() => {
-    if (props.rocketsFetched) {
+    const [rocketsFetched] = props;
+    if (rocketsFetched) {
       setRockets(rocketsInit);
     }
   }, [rocketsInit, props]);
@@ -28,6 +30,6 @@ const Rockets = (props) => {
       Rockets
     </div>
   );
-}
+};
 
 export default Rockets;
