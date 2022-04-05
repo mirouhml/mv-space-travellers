@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/mv-space-travellers/static/css/main.21f5cbeb.css",
-    "main.js": "/mv-space-travellers/static/js/main.78192540.js",
+    "main.js": "/mv-space-travellers/static/js/main.e856ec01.js",
     "index.html": "/mv-space-travellers/index.html",
     "main.21f5cbeb.css.map": "/mv-space-travellers/static/css/main.21f5cbeb.css.map",
-    "main.78192540.js.map": "/mv-space-travellers/static/js/main.78192540.js.map"
+    "main.e856ec01.js.map": "/mv-space-travellers/static/js/main.e856ec01.js.map"
   },
   "entrypoints": [
     "static/css/main.21f5cbeb.css",
-    "static/js/main.78192540.js"
+    "static/js/main.e856ec01.js"
   ]
 }
