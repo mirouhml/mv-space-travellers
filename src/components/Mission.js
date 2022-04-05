@@ -1,5 +1,4 @@
 import React from 'react';
-// import { useTable } from 'react-table';
 
 const Mission = (mission) => {
   const { id, name, description } = mission;
