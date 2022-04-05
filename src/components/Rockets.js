@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
-import { getRockets } from '../redux/rockets/rockets';
+import { getRockets, reserveRocket } from '../redux/rockets/rockets';
 import Rocket from './Rocket';
 import './Rockets.css';
 
@@ -25,12 +25,23 @@ const Rockets = (props) => {
     }
   }, [rocketsInit, props]);
 
+  const reserveRocketAction = (id) => {
+    dispatch(reserveRocket(id));
+  };
+
   return (
     <ul className="rockets">
       {
         rockets.map((rocket) => (
           <li key={rocket.id} className="rocket-item">
-            <Rocket name={rocket.name} image={rocket.image} description={rocket.description} />
+            <Rocket
+              id={rocket.id}
+              name={rocket.name}
+              image={rocket.image}
+              description={rocket.description}
+              reserveRocket={reserveRocketAction}
+              reserved={rocket.reserved}
+            />
           </li>
         ))
       }
