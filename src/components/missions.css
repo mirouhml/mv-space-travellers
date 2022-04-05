@@ -1,27 +1,28 @@
-.missions {   
-    width: 90%;
-    box-sizing: border-box;
-    padding: 20px;
-    margin:2rem auto;
-  }
-  
-  .mission-item {
-    box-sizing: border-box;
-    background-color: white;
-    padding: 200px;
-  }
+.missions {
+  width: 90%;
+  box-sizing: border-box;
+  padding: 20px;
+  margin: 2rem auto;
+}
 
-    .mission-item:nth-child(odd) {
-        background-color: lightgrey;
-    }
+.mission-item {
+  box-sizing: border-box;
+  background-color: white;
+  padding: 200px;
+}
 
-    table {
-        width: 100%;
-        border-collapse: collapse;
-    }
+.mission-item:nth-child(odd) {
+  background-color: lightgrey;
+}
 
-    td, th {
-        border: 1px solid #dddddd;
-        text-align: left;
-        padding: 8px;
-    }
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td,
+th {
+  border: 1px solid #ddd;
+  text-align: left;
+  padding: 8px;
+}
