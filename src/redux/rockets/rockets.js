@@ -2,6 +2,7 @@ import fetchRockets from '../../services/FetchRockets';
 
 const GET_ROCKETS = 'GET_ROCKETS';
 const RESERVE = 'RESERVE';
+const CANCEL = 'CANCEL';
 
 const getRockets = () => async (dispatch) => {
   try {
@@ -32,6 +33,11 @@ const reserveRocket = (id) => ({
   id,
 });
 
+const cancelReservation = (id) => ({
+  type: CANCEL,
+  id,
+});
+
 const reducer = (rockets = [], action) => {
   switch (action.type) {
     case GET_ROCKETS:
@@ -41,9 +47,14 @@ const reducer = (rockets = [], action) => {
         if (rocket.id !== action.id) return rocket;
         return { ...rocket, reserved: true };
       });
+    case CANCEL:
+      return rockets.map((rocket) => {
+        if (rocket.id !== action.id) return rocket;
+        return { ...rocket, reserved: false };
+      });
     default: return rockets;
   }
 };
 
-export { getRockets, reserveRocket };
+export { getRockets, reserveRocket, cancelReservation };
 export default reducer;
