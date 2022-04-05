@@ -1,5 +1,4 @@
 import React from 'react';
-import './mission.css';
 
 const Mission = (mission) => {
   const { id, name, description } = mission;
