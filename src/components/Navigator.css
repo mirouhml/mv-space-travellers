@@ -1,10 +1,10 @@
 .header {
   display: flex;
   align-items: center;
-  padding: 0 2rem;
+  padding: 0 4rem;
   border-bottom: 2px solid rgba(0, 0, 0, 0.2);
-  -webkit-background-clip: padding-box; /* for Safari */
-  background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
 }
 
 .menu-items {

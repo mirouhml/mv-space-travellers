@@ -10,9 +10,9 @@ const getRockets = () => async (dispatch) => {
       rockets.push({
         id: rocket.rocket_id,
         name: rocket.rocket_name,
-        type: rocket.rocket_type,
-        images: rocket.flickr_images,
+        image: rocket.flickr_images[0],
         wikipedia: rocket.wikipedia,
+        description: rocket.description,
       });
     });
     dispatch({
