@@ -23,9 +23,18 @@
 
 .rocket-button {
   padding: 0.5rem 1rem;
-  background-color: #4949f9;
-  border: 0;
   border-radius: 4px;
-  color: white;
   width: fit-content;
+}
+
+.unclicked {
+  background-color: #4949f9;
+  color: white;
+  border: 1px solid #4949f9;
+}
+
+.clicked {
+  background-color: white;
+  color: #6e757c;
+  border: 1px solid #6e757c;
 }

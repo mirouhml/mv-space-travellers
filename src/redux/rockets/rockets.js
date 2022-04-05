@@ -1,6 +1,7 @@
 import fetchRockets from '../../services/FetchRockets';
 
 const GET_ROCKETS = 'GET_ROCKETS';
+const RESERVE = 'RESERVE';
 
 const getRockets = () => async (dispatch) => {
   try {
@@ -13,6 +14,7 @@ const getRockets = () => async (dispatch) => {
         image: rocket.flickr_images[0],
         wikipedia: rocket.wikipedia,
         description: rocket.description,
+        reserved: false,
       });
     });
     dispatch({
@@ -25,13 +27,23 @@ const getRockets = () => async (dispatch) => {
   }
 };
 
+const reserveRocket = (id) => ({
+  type: RESERVE,
+  id,
+});
+
 const reducer = (rockets = [], action) => {
   switch (action.type) {
     case GET_ROCKETS:
       return action.rockets;
+    case RESERVE:
+      return rockets.map((rocket) => {
+        if (rocket.id !== action.id) return rocket;
+        return { ...rocket, reserved: true };
+      });
     default: return rockets;
   }
 };
 
-export { getRockets };
+export { getRockets, reserveRocket };
 export default reducer;
