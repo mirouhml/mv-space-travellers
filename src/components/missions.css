@@ -31,19 +31,18 @@ th {
   width: 7rem;
   border-radius: 0.2rem;
   font-size: 0.9rem;
-  width: 7rem;
   height: 2rem;
   text-align: center;
   margin: 2rem auto;
   background-color: darkgrey;
 }
 
-.btn { 
-   background-color: inherit;
-   border-radius: 0.5rem;
-   font-size: 0.9rem;
-   width: 7rem;
-   height: 2.7rem;
+.btn {
+  background-color: inherit;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  width: 7rem;
+  height: 2.7rem;
 }
 
 .joined {
@@ -51,7 +50,3 @@ th {
   border: 1px solid red;
   outline: none;
 }
-
-.disjoined {
-  color: dark;
-  }
