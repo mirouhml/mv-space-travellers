@@ -10,6 +10,7 @@ const Rocket = (rocket) => {
     image,
     description,
     reserveRocket,
+    cancelReservation,
     reserved,
   } = rocket;
   return (
@@ -20,12 +21,16 @@ const Rocket = (rocket) => {
         <p className="rocket-description">{description}</p>
         <button
           type="button"
-          className={'rocket-button ' + (reserved ? 'clicked' : 'unclicked')}
+          className={(reserved ? 'rocket-button clicked' : 'rocket-button unclicked')}
           onClick={(e) => {
             if (!reserved) {
               e.target.classList.remove('unclicked');
               e.target.classList.add('clicked');
               reserveRocket(id);
+            } else {
+              e.target.classList.remove('clicked');
+              e.target.classList.add('unclicked');
+              cancelReservation(id);
             }
           }}
         >

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
-import { getRockets, reserveRocket } from '../redux/rockets/rockets';
+import { getRockets, reserveRocket, cancelReservation } from '../redux/rockets/rockets';
 import Rocket from './Rocket';
 import './Rockets.css';
 
@@ -29,6 +29,10 @@ const Rockets = (props) => {
     dispatch(reserveRocket(id));
   };
 
+  const cancelReservationAction = (id) => {
+    dispatch(cancelReservation(id));
+  };
+
   return (
     <ul className="rockets">
       {
@@ -40,6 +44,7 @@ const Rockets = (props) => {
               image={rocket.image}
               description={rocket.description}
               reserveRocket={reserveRocketAction}
+              cancelReservation={cancelReservationAction}
               reserved={rocket.reserved}
             />
           </li>
