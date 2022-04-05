@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import PropTypes from 'prop-types';
 import { getRockets } from '../redux/rockets/rockets';
 
 const Rockets = (props) => {
@@ -8,7 +9,7 @@ const Rockets = (props) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    const [rocketsFetched, setRocketsFetched] = props;
+    const { rocketsFetched, setRocketsFetched } = props;
     if (!rocketsFetched) {
       dispatch(getRockets());
       setRocketsFetched(true);
@@ -16,7 +17,7 @@ const Rockets = (props) => {
   }, [dispatch, props]);
 
   useEffect(() => {
-    const [rocketsFetched] = props;
+    const { rocketsFetched } = props;
     if (rocketsFetched) {
       setRockets(rocketsInit);
     }
@@ -25,11 +26,18 @@ const Rockets = (props) => {
   return (
     <div>
       {
-        console.log(rockets)
+        rockets.map((rocket) => (
+          <div key={rocket.id}>{rocket.name}</div>
+        ))
       }
       Rockets
     </div>
   );
+};
+
+Rockets.propTypes = {
+  rocketsFetched: PropTypes.bool.isRequired,
+  setRocketsFetched: PropTypes.func.isRequired,
 };
 
 export default Rockets;
