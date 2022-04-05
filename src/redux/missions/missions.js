@@ -31,6 +31,11 @@ const joinMission = (id) => ({
   id,
 });
 
+const cancelMission = (id) => ({
+  type: CANCEL,
+  id,
+});
+
 const reducer = (missions = [], action) => {
   switch (action.type) {
     case GET_MISSIONS:
@@ -49,5 +54,5 @@ const reducer = (missions = [], action) => {
   }
 };
 
-export { getMissions, joinMission };
+export { getMissions, joinMission, cancelMission };
 export default reducer;
