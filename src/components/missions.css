@@ -1,0 +1,27 @@
+.missions {   
+    width: 90%;
+    box-sizing: border-box;
+    padding: 20px;
+    margin:2rem auto;
+  }
+  
+  .mission-item {
+    box-sizing: border-box;
+    background-color: white;
+    padding: 200px;
+  }
+
+    .mission-item:nth-child(odd) {
+        background-color: lightgrey;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
