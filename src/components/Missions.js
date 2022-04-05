@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
-import { getMissions, joinMission } from '../redux/missions/missions';
+import { getMissions, joinMission, cancelMission } from '../redux/missions/missions';
 import Mission from './Mission';
 import './missions.css';
 
@@ -29,6 +29,10 @@ const Missions = (props) => {
     dispatch(joinMission(id));
   };
 
+  const cancelMissionAction = (id) => {
+    dispatch(cancelMission(id));
+  };
+
   return (
     <table className="missions">
       <thead>
@@ -47,6 +51,7 @@ const Missions = (props) => {
             id={mission.id}
             description={mission.description}
             joinMission={joinMissionAction}
+            cancelMission={cancelMissionAction}
             joined={mission.joined}
           />
         </tbody>
