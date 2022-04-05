@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import { getMissions } from '../redux/missions/missions';
 import Mission from './Mission';
+import './missions.css';
 
 const Missions = (props) => {
   const [missions, setMissions] = useState([]);
