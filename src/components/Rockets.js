@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import { getRockets } from '../redux/rockets/rockets';
+import Rocket from './Rocket';
+import './Rockets.css';
 
 const Rockets = (props) => {
   const [rockets, setRockets] = useState([]);
@@ -24,14 +26,15 @@ const Rockets = (props) => {
   }, [rocketsInit, props]);
 
   return (
-    <div>
+    <ul className="rockets">
       {
         rockets.map((rocket) => (
-          <div key={rocket.id}>{rocket.name}</div>
+          <li key={rocket.id} className="rocket-item">
+            <Rocket name={rocket.name} image={rocket.image} description={rocket.description} />
+          </li>
         ))
       }
-      Rockets
-    </div>
+    </ul>
   );
 };
 
