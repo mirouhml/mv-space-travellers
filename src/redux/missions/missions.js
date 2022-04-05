@@ -1,6 +1,7 @@
 import fetchMissions from '../../services/FetchMissions';
 
 const GET_MISSIONS = 'GET_MISSIONS';
+const JOIN = 'JOIN_MISSIONS';
 
 const getMissions = () => async (dispatch) => {
   try {
@@ -23,13 +24,23 @@ const getMissions = () => async (dispatch) => {
   }
 };
 
+const joinMission = (id) => ({
+  type: JOIN,
+  id,
+});
+
 const reducer = (missions = [], action) => {
   switch (action.type) {
     case GET_MISSIONS:
       return action.missions;
+    case JOIN:
+      return missions.map((mission) => {
+        if (mission.id !== action.id) return mission;
+        return { ...mission, reserved: true };
+      });
     default: return missions;
   }
 };
 
-export { getMissions };
+export { getMissions, joinMission };
 export default reducer;
