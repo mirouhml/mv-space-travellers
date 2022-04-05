@@ -23,5 +23,13 @@ const getMissions = () => async (dispatch) => {
   }
 };
 
-export default { getMissions };
-// export default reducer;
+const reducer = (missions = [], action) => {
+  switch (action.type) {
+    case GET_MISSIONS:
+      return action.missions;
+    default: return missions;
+  }
+};
+
+export { getMissions };
+export default reducer;
