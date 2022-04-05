@@ -23,8 +23,19 @@
 }
 
 .my-rockets li {
+  display: flex;
+  align-items: center;
   padding: 1rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.my-rockets a {
+  text-decoration: none;
+  color: rgb(70, 147, 240);
+}
+
+.my-rockets h3 {
+  flex-grow: 1;
 }
 
 .my-rockets li:last-child {
