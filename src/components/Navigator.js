@@ -21,6 +21,7 @@ const toggleActive = (e) => {
 };
 
 const Navigator = () => {
+  const [rockets, setRockets] = useState([]);
   const [rocketsFetched, setRocketsFetched] = useState(false);
 
   return (
@@ -45,8 +46,8 @@ const Navigator = () => {
           </ul>
         </div>
         <Routes>
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/" element={<Rockets rocketsFetched={rocketsFetched} setRocketsFetched={setRocketsFetched} />} />
+          <Route path="/profile" element={<Profile rockets={rockets} />} />
+          <Route path="/" element={<Rockets rocketsFetched={rocketsFetched} setRocketsFetched={setRocketsFetched} rockets={rockets} setRockets={setRockets} />} />
           <Route path="/mission" element={<Missions />} />
         </Routes>
       </div>
