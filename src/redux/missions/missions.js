@@ -2,7 +2,7 @@ import fetchMissions from '../../services/FetchMissions';
 
 const GET_MISSIONS = 'GET_MISSIONS';
 const JOIN = 'JOIN_MISSIONS';
-const CANCEL = 'CANCEL_MISSIONS';
+const LEAVE = 'LEAVE_MISSIONS';
 
 const getMissions = () => async (dispatch) => {
   try {
@@ -31,8 +31,8 @@ const joinMission = (id) => ({
   id,
 });
 
-const cancelMission = (id) => ({
-  type: CANCEL,
+const leaveMission = (id) => ({
+  type: LEAVE,
   id,
 });
 
@@ -45,7 +45,7 @@ const reducer = (missions = [], action) => {
         if (mission.id !== action.id) return mission;
         return { ...mission, joined: true };
       });
-    case CANCEL:
+    case LEAVE:
       return missions.map((mission) => {
         if (mission.id !== action.id) return mission;
         return { ...mission, joined: false };
@@ -54,5 +54,5 @@ const reducer = (missions = [], action) => {
   }
 };
 
-export { getMissions, joinMission, cancelMission };
+export { getMissions, joinMission, leaveMission };
 export default reducer;

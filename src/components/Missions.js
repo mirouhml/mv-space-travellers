@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
-import { getMissions, joinMission, cancelMission } from '../redux/missions/missions';
+import { getMissions, joinMission, leaveMission } from '../redux/missions/missions';
 import Mission from './Mission';
 import './missions.css';
 
@@ -30,7 +30,7 @@ const Missions = (props) => {
   };
 
   const cancelMissionAction = (id) => {
-    dispatch(cancelMission(id));
+    dispatch(leaveMission(id));
   };
 
   return (
@@ -51,7 +51,7 @@ const Missions = (props) => {
             id={mission.id}
             description={mission.description}
             joinMission={joinMissionAction}
-            cancelMission={cancelMissionAction}
+            leaveMission={cancelMissionAction}
             joined={mission.joined}
           />
         </tbody>

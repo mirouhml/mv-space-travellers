@@ -6,19 +6,19 @@ const Mission = (mission) => {
     name,
     description,
     joinMission,
-    cancelMission,
+    leaveMission,
     joined,
   } = mission;
 
   const handleSubmit = (e) => {
     if (!joined) {
-      e.target.classList.remove('disjoined');
+      e.target.classList.remove('leave');
       e.target.classList.add('joined');
       joinMission(id);
     } else {
       e.target.classList.remove('joined');
-      e.target.classList.add('disjoined');
-      cancelMission(id);
+      e.target.classList.add('leave');
+      leaveMission(id);
     }
   };
 
