@@ -6,7 +6,7 @@ const Mission = (mission) => {
     <tr key={id}>
       <td>{name}</td>
       <td>{description}</td>
-      <td><button type="button">NOT A MEMBER</button></td>
+      <td><p>NOT A MEMBER</p></td>
       <td><button type="button">Join Mission</button></td>
     </tr>
   );
