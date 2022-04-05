@@ -26,3 +26,15 @@ th {
   text-align: left;
   padding: 8px;
 }
+
+.join {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+  margin: 2rem auto;
+  background-color: red;
+}
+
+.not-joined {
+  background-color: green;
+}
