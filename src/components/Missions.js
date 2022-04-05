@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import { getMissions } from '../redux/missions/missions';
+import Mission from './Mission';
+import './missions.css';
 
 const Missions = (props) => {
   const [missions, setMissions] = useState([]);
@@ -24,15 +26,23 @@ const Missions = (props) => {
   }, [missionsInit, props]);
 
   return (
-    <div className="missions">
+    <table className="missions">
+      <thead>
+        <tr>
+          <th>Mission</th>
+          <th>Description</th>
+          <th>Status</th>
+          <th>.</th>
+        </tr>
+      </thead>
       {
-            missions.map((mission) => (
-              <div className="missions" key={mission.id}>
-                {mission.name}
-              </div>
-            ))
-        }
-    </div>
+      missions.map((mission) => (
+        <tbody key={mission.id} className="mission-item">
+          <Mission name={mission.name} id={mission.id} description={mission.description} />
+        </tbody>
+      ))
+    }
+    </table>
   );
 };
 
