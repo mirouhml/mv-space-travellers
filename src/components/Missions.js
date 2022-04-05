@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import { getMissions } from '../redux/missions/missions';
+import Mission from './Mission';
 
 const Missions = (props) => {
   const [missions, setMissions] = useState([]);
@@ -24,15 +25,15 @@ const Missions = (props) => {
   }, [missionsInit, props]);
 
   return (
-    <div className="missions">
+    <ul className="missions">
       {
-            missions.map((mission) => (
-              <div className="missions" key={mission.id}>
-                {mission.name}
-              </div>
-            ))
-        }
-    </div>
+      missions.map((mission) => (
+        <li key={mission.id} className="mission-item">
+          <Mission name={mission.name} id={mission.id} description={mission.description} />
+        </li>
+      ))
+    }
+    </ul>
   );
 };
 
