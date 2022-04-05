@@ -26,7 +26,7 @@ const Mission = (mission) => {
     <tr key={id}>
       <td>{name}</td>
       <td>{description}</td>
-      <td><p>NOT A MEMBER</p></td>
+      <td><p className="member">NOT A MEMBER</p></td>
       <td>
         <button
           className="btn"
