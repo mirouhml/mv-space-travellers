@@ -9,6 +9,7 @@ import {
 } from 'react-router-dom';
 import Profile from './Profile';
 import Rockets from './Rockets';
+import Missions from './Missions';
 import './Navigator.css';
 
 const toggleActive = (e) => {
@@ -35,7 +36,7 @@ const Navigator = () => {
               <Link to="/" id="rockets" onClick={toggleActive} className="link">Rockets</Link>
             </li>
             <li>
-              <a href="#" onClick={toggleActive} className="link">Missions</a>
+              <Link to="/mission" id="missions" onClick={toggleActive} className="link">Missions</Link>
             </li>
             <li>
               <div className="vertical-line" />
@@ -48,6 +49,7 @@ const Navigator = () => {
         <Routes>
           <Route path="/profile" element={<Profile />} />
           <Route path="/" element={<Rockets rocketsFetched={rocketsFetched} setRocketsFetched={setRocketsFetched} />} />
+          <Route path="/mission" element={<Missions />} />
         </Routes>
       </div>
     </Router>
