@@ -18,7 +18,14 @@ const Rocket = (rocket) => {
       <img src={image} alt={name} className="rocket-image" />
       <div className="rocket-info">
         <h2 className="rocket-name">{name}</h2>
-        <p className="rocket-description">{description}</p>
+        <div className="rocket-description-container">
+          <p className="rocket-description">
+            {reserved && (
+              <span className="rocket-badge">Reserved</span>
+            )}
+            {description}
+          </p>
+        </div>
         <button
           type="button"
           className={(reserved ? 'rocket-button clicked' : 'rocket-button unclicked')}
