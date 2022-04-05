@@ -25,15 +25,23 @@ const Missions = (props) => {
   }, [missionsInit, props]);
 
   return (
-    <ul className="missions">
+    <table className="missions">
+      <thead>
+        <tr>
+          <th>Mission</th>
+          <th>Description</th>
+          <th>Status</th>
+          <th>.</th>
+        </tr>
+      </thead>
       {
       missions.map((mission) => (
-        <li key={mission.id} className="mission-item">
+        <tbody key={mission.id} className="mission-item">
           <Mission name={mission.name} id={mission.id} description={mission.description} />
-        </li>
+        </tbody>
       ))
     }
-    </ul>
+    </table>
   );
 };
 
