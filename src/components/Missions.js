@@ -9,16 +9,16 @@ const Missions = (props) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    const { fetchMissions, setFetchMissions } = props;
-    if (!fetchMissions) {
+    const { missionsFetched, setMissionsFetched } = props;
+    if (!missionsFetched) {
       dispatch(getMissions());
-      setFetchMissions(true);
+      setMissionsFetched(true);
     }
   }, [dispatch, props]);
 
   useEffect(() => {
-    const { fetchMissions } = props;
-    if (fetchMissions) {
+    const { missionsFetched } = props;
+    if (missionsFetched) {
       setMissions(missionsInit);
     }
   }, [missionsInit, props]);
@@ -28,7 +28,7 @@ const Missions = (props) => {
       {
             missions.map((mission) => (
               <div className="missions" key={mission.id}>
-                {mission.description}
+                {mission.name}
               </div>
             ))
         }
@@ -37,8 +37,8 @@ const Missions = (props) => {
 };
 
 Missions.propTypes = {
-  fetchMissions: PropTypes.bool.isRequired,
-  setFetchMissions: PropTypes.func.isRequired,
+  missionsFetched: PropTypes.bool.isRequired,
+  setMissionsFetched: PropTypes.func.isRequired,
 };
 
 export default Missions;
