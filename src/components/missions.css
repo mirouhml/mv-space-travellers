@@ -27,6 +27,11 @@ th {
   padding: 8px;
 }
 
+.bold-text {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
 .member-btn {
   width: 7.2rem;
   border-radius: 0.4rem;

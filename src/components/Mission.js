@@ -12,7 +12,7 @@ const Mission = (mission) => {
 
   return (
     <tr key={id}>
-      <td>{name}</td>
+      <td className="bold-text">{name}</td>
       <td>{description}</td>
       <td>
         {joined && (
