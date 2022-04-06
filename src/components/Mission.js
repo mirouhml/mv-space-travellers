@@ -28,12 +28,12 @@ const Mission = (mission) => {
       </td>
       <td>
         {!joined && (
-          <button type="submit" className="memberBtn join-mission" onClick={() => joinMission(id)}>
+          <button type="submit" className="mission-btn join-mission" onClick={() => joinMission(id)}>
             Join Mission
           </button>
         )}
         {joined && (
-        <button type="submit" className="memberBtn leave-mission" onClick={() => leaveMission(id)}>
+        <button type="submit" className="mission-btn leave-mission" onClick={() => leaveMission(id)}>
           Leave Mission
         </button>
         )}
