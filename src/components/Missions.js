@@ -37,10 +37,10 @@ const Missions = (props) => {
     <table className="missions">
       <thead>
         <tr>
-          <th>Mission</th>
-          <th>Description</th>
-          <th>Status</th>
-          <th>.</th>
+          <th className="bold-text">Mission</th>
+          <th className="bold-text">Description</th>
+          <th className="bold-text">Status</th>
+          <th> </th>
         </tr>
       </thead>
       {
