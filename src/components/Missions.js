@@ -64,6 +64,13 @@ const Missions = (props) => {
 Missions.propTypes = {
   missionsFetched: PropTypes.bool.isRequired,
   setMissionsFetched: PropTypes.func.isRequired,
+  missions: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    joined: PropTypes.bool.isRequired,
+  })).isRequired,
+  setMissions: PropTypes.func.isRequired,
 };
 
 export default Missions;
