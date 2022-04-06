@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './profiles.css';
+import './Profile.css';
 
 const Profile = (props) => {
   let { missions, rockets } = props;
@@ -10,7 +10,7 @@ const Profile = (props) => {
   if (missions.length > 0) empty = false;
   if (rockets.length > 0) empty = false;
   return (
-    <div className="container">
+    <div className="profile-container">
       <div className="profile">
         <div className="profile-missions">
           <h2>My Missions</h2>

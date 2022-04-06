@@ -41,3 +41,31 @@
 .my-rockets li:last-child {
   border: 0;
 }
+
+
+.my-missions {
+  list-style-type: none;
+  padding: 0;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.my-missions li {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.my-missions a {
+  text-decoration: none;
+  color: rgb(70, 147, 240);
+}
+
+.my-missions h3 {
+  flex-grow: 1;
+}
+
+.my-missions li:last-child {
+  border: 0;
+}
