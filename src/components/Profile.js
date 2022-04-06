@@ -11,9 +11,9 @@ const Profile = (props) => {
   return (
     <div className="container">
       <div className="profile">
-        <div className="my-missions">
+        <div className="profile-missions">
           <h2>My Missions</h2>
-          <ul className="joined-missions">
+          <ul className="my-missions">
             {empty && (
             <li>No Missions to display.</li>
             )}
