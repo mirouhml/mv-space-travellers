@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import { getRockets, reserveRocket, cancelReservation } from '../redux/rockets/rockets';
@@ -6,7 +6,7 @@ import Rocket from './Rocket';
 import './Rockets.css';
 
 const Rockets = (props) => {
-  const [rockets, setRockets] = useState([]);
+  const { rockets, setRockets } = props;
   const rocketsInit = useSelector((state) => state.rockets);
   const dispatch = useDispatch();
 
@@ -57,6 +57,15 @@ const Rockets = (props) => {
 Rockets.propTypes = {
   rocketsFetched: PropTypes.bool.isRequired,
   setRocketsFetched: PropTypes.func.isRequired,
+  rockets: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    image: PropTypes.string.isRequired,
+    wikipedia: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    reserved: PropTypes.bool.isRequired,
+  })).isRequired,
+  setRockets: PropTypes.func.isRequired,
 };
 
 export default Rockets;
