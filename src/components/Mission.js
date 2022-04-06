@@ -26,7 +26,18 @@ const Mission = (mission) => {
     <tr key={id}>
       <td>{name}</td>
       <td>{description}</td>
-      <td><p className="member">NOT A MEMBER</p></td>
+      <td>
+        {joined && (
+          <button type="submit" className="member-btn active-member">
+            Active Member
+          </button>
+        )}
+        {!joined && (
+          <button type="submit" className="member-btn non-member">
+            Not a Member
+          </button>
+        )}
+      </td>
       <td>
         <button
           className="btn"
