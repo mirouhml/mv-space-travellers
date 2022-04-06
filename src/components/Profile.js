@@ -8,7 +8,17 @@ const Profile = (props) => {
   if (missions.length <= 1) empty = false;
 
   return (
-   
+    <div className="container">
+      <div className="profile">
+        <div className="rockets">My Rockets</div>
+        <div className="missions">
+          <h2>My Missions</h2>
+          <ul className="joined-missions">
+           <li>Missions</li>
+          </ul>
+        </div>
+      </div>
+    </div>
   );
 };
 
