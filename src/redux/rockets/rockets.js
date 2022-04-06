@@ -56,5 +56,9 @@ const reducer = (rockets = [], action) => {
   }
 };
 
-export { getRockets, reserveRocket, cancelReservation };
+export {
+  getRockets,
+  reserveRocket,
+  cancelReservation,
+};
 export default reducer;

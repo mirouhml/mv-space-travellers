@@ -38,3 +38,21 @@
   color: #6e757c;
   border: 1px solid #6e757c;
 }
+
+.rocket-description-container {
+  display: flex;
+  padding: 0.5rem 0;
+}
+
+.rocket-description {
+  margin: 0;
+}
+
+.rocket-badge {
+  padding: 0.1rem 0.2rem;
+  background-color: #1693a7;
+  border-radius: 5px;
+  color: white;
+  font-size: 0.8rem;
+  margin-right: 0.5rem;
+}
