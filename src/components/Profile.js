@@ -12,7 +12,7 @@ const Profile = (props) => {
   return (
     <div className="profile-container">
       <div className="profile">
-        <div className="profile-missions">
+        <div className="missions">
           <h2>My Missions</h2>
           <ul className="my-missions">
             {empty && (

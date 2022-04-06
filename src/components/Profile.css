@@ -15,34 +15,7 @@
   box-sizing: border-box;
 }
 
-.my-rockets {
-  list-style-type: none;
-  padding: 0;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 10px;
-}
-
-.my-rockets li {
-  display: flex;
-  align-items: center;
-  padding: 1rem;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-}
-
-.my-rockets a {
-  text-decoration: none;
-  color: rgb(70, 147, 240);
-}
-
-.my-rockets h3 {
-  flex-grow: 1;
-}
-
-.my-rockets li:last-child {
-  border: 0;
-}
-
-
+.my-rockets,
 .my-missions {
   list-style-type: none;
   padding: 0;
@@ -50,6 +23,7 @@
   border-radius: 10px;
 }
 
+.my-rockets li,
 .my-missions li {
   display: flex;
   align-items: center;
@@ -57,15 +31,18 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
+.my-rockets a,
 .my-missions a {
   text-decoration: none;
   color: rgb(70, 147, 240);
 }
 
+.my-rockets h3,
 .my-missions h3 {
   flex-grow: 1;
 }
 
+.my-rockets li:last-child, 
 .my-missions li:last-child {
   border: 0;
 }
