@@ -1,18 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './profiles.css';
 
 const Profile = (props) => {
   let { missions } = props;
-  missions = missions.filter((mission) => mission.reserved === true);
+  missions = missions.filter((mission) => mission.joined === true);
   let empty = true;
   if (missions.length > 0) empty = false;
 
   return (
     <div className="container">
       <div className="profile">
-        <div className="missions">
+        <div className="profile-missions">
           <h2>My Missions</h2>
-          <ul className="joined-missions">
+          <ul className="my-missions">
             {empty && (
             <li>No Missions to display.</li>
             )}
@@ -36,7 +37,7 @@ Profile.propTypes = {
     id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
-    reserved: PropTypes.bool.isRequired,
+    joined: PropTypes.bool.isRequired,
   })).isRequired,
 };
 
