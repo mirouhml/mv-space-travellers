@@ -14,7 +14,16 @@ const Profile = (props) => {
         <div className="missions">
           <h2>My Missions</h2>
           <ul className="joined-missions">
-           <li>Missions</li>
+            {empty && (
+            <li>No Missions to display.</li>
+            )}
+            {
+                missions.map((mission) => (
+                  <li key={mission.id}>
+                    <h3>{mission.name}</h3>
+                  </li>
+                ))
+              }
           </ul>
         </div>
       </div>
