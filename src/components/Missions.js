@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import { getMissions, joinMission, leaveMission } from '../redux/missions/missions';
@@ -6,7 +6,7 @@ import Mission from './Mission';
 import './missions.css';
 
 const Missions = (props) => {
-  const [missions, setMissions] = useState([]);
+  const { missions, setMissions } = props;
   const missionsInit = useSelector((state) => state.missions);
   const dispatch = useDispatch();
 
@@ -50,6 +50,7 @@ const Missions = (props) => {
             name={mission.name}
             id={mission.id}
             description={mission.description}
+            wikipedia={mission.wikipedia}
             joinMission={joinMissionAction}
             leaveMission={cancelMissionAction}
             joined={mission.joined}
@@ -64,6 +65,13 @@ const Missions = (props) => {
 Missions.propTypes = {
   missionsFetched: PropTypes.bool.isRequired,
   setMissionsFetched: PropTypes.func.isRequired,
+  missions: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    joined: PropTypes.bool.isRequired,
+  })).isRequired,
+  setMissions: PropTypes.func.isRequired,
 };
 
 export default Missions;

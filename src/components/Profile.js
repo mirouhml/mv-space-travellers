@@ -3,15 +3,33 @@ import PropTypes from 'prop-types';
 import './Profile.css';
 
 const Profile = (props) => {
-  let { rockets } = props;
+  let { missions, rockets } = props;
+  missions = missions.filter((mission) => mission.joined === true);
   rockets = rockets.filter((rocket) => rocket.reserved === true);
   let empty = true;
+  if (missions.length > 0) empty = false;
   if (rockets.length > 0) empty = false;
   return (
     <div className="profile-container">
       <div className="profile">
-        <div className="profile-missions">My Missions</div>
-        <div className="profile-rockets">
+        <div className="missions">
+          <h2>My Missions</h2>
+          <ul className="my-missions">
+            {empty && (
+            <li>No Missions to display.</li>
+            )}
+            {
+                missions.map((mission) => (
+                  <li key={mission.id}>
+                    <h3>{mission.name}</h3>
+                    <a href={mission.wikipedia} alt="Wikipedia link" target="_blank" rel="noreferrer">Read more</a>
+
+                  </li>
+                ))
+              }
+          </ul>
+        </div>
+        <div className="rockets">
           <h2>My Rockets</h2>
           <ul className="my-rockets">
             {empty && (
@@ -33,6 +51,13 @@ const Profile = (props) => {
 };
 
 Profile.propTypes = {
+  missions: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    wikipedia: PropTypes.string.isRequired,
+    joined: PropTypes.bool.isRequired,
+  })).isRequired,
   rockets: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
