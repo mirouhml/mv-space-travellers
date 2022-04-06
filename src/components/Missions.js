@@ -50,6 +50,7 @@ const Missions = (props) => {
             name={mission.name}
             id={mission.id}
             description={mission.description}
+            wikipedia={mission.wikipedia}
             joinMission={joinMissionAction}
             leaveMission={cancelMissionAction}
             joined={mission.joined}

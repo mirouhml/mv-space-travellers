@@ -22,6 +22,8 @@ const Profile = (props) => {
                 missions.map((mission) => (
                   <li key={mission.id}>
                     <h3>{mission.name}</h3>
+                    <a href={mission.wikipedia} alt="Wikipedia link" target="_blank" rel="noreferrer">Read more</a>
+
                   </li>
                 ))
               }
@@ -53,6 +55,7 @@ Profile.propTypes = {
     id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
+    wikipedia: PropTypes.string.isRequired,
     joined: PropTypes.bool.isRequired,
   })).isRequired,
   rockets: PropTypes.arrayOf(PropTypes.shape({
