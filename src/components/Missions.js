@@ -6,6 +6,7 @@ import Mission from './Mission';
 import './missions.css';
 
 const Missions = (props) => {
+  const { missions, setMissions } = props;
   const missionsInit = useSelector((state) => state.missions);
   const dispatch = useDispatch();
 
