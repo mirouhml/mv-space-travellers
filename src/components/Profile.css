@@ -42,7 +42,7 @@
   flex-grow: 1;
 }
 
-.my-rockets li:last-child, 
+.my-rockets li:last-child,
 .my-missions li:last-child {
   border: 0;
 }
