@@ -29,17 +29,17 @@ $ git clone git@github.com:mirouhml/mv-space-travellers.git.
 ```
 - Press Enter to create your local clone.
 - Navigate to the cloned repository by running:
-    ```
-    $ cd mv-space-travellers
-    ```
+```
+$ cd mv-space-travellers
+```
 - Install all dependencies using:
-    ``` 
-    $ npm install
-    ```
+``` 
+$ npm install
+```
 - Run local server using:
-    ``` 
-    $ npm start
-    ```
+``` 
+$ npm start
+```
 
 ### Prerequisites
 - GitHub
