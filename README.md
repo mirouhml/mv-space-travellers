@@ -2,6 +2,11 @@
 
 # Space Travellers' Hub
 
+This is a website about space missions and rockets.
+
+![localhost_3000_mv-space-travellers](https://user-images.githubusercontent.com/20567503/162003030-067de73b-d04e-40ec-a8f8-65e2993db821.png)
+![localhost_3000_mv-space-travellers (1)](https://user-images.githubusercontent.com/20567503/162003017-27cb5eba-e497-43b6-81c1-00cce2d7ffdc.png)
+![localhost_3000_mv-space-travellers (2)](https://user-images.githubusercontent.com/20567503/162003008-0cf070ea-001f-4592-bc40-7e9849471167.png)
 
 ## Built With
 
@@ -25,7 +30,7 @@ $ git clone git@github.com:mirouhml/mv-space-travellers.git.
 - Press Enter to create your local clone.
 - Navigate to the cloned repository by running:
     ```
-    $ cd Bookstore
+    $ cd mv-space-travellers
     ```
 - Install all dependencies using:
     ``` 

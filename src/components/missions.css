@@ -11,8 +11,8 @@
   padding: 200px;
 }
 
-.mission-item:nth-child(odd) {
-  background-color: lightgrey;
+.mission-item:nth-child(even) {
+  background-color: #f2f2f2;
 }
 
 table {
@@ -45,10 +45,11 @@ th {
 
 button {
   background-color: inherit;
-  border-radius: 0.5rem;
+  border-radius: 4px;
   font-size: 0.9rem;
   width: 7rem;
   height: 2.7rem;
+  border: 0;
 }
 
 .leave-mission {
@@ -60,4 +61,8 @@ button {
 .active-member {
   background-color: #10a7be;
   color: #fff;
+}
+
+.join-mission {
+  border: 1px solid black;
 }

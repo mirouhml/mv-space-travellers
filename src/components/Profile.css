@@ -40,6 +40,8 @@
 .my-rockets h3,
 .my-missions h3 {
   flex-grow: 1;
+  padding: 0;
+  margin: 0;
 }
 
 .my-rockets li:last-child,
