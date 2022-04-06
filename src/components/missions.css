@@ -27,17 +27,23 @@ th {
   padding: 8px;
 }
 
-.member {
-  width: 7rem;
-  border-radius: 0.2rem;
+.bold-text {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.member-btn {
+  width: 7.2rem;
+  border-radius: 0.4rem;
   font-size: 0.9rem;
   height: 2rem;
   text-align: center;
   margin: 2rem auto;
+  color: #fff;
   background-color: darkgrey;
 }
 
-.btn {
+button {
   background-color: inherit;
   border-radius: 0.5rem;
   font-size: 0.9rem;
@@ -45,8 +51,13 @@ th {
   height: 2.7rem;
 }
 
-.joined {
+.leave-mission {
   color: red;
   border: 1px solid red;
   outline: none;
+}
+
+.active-member {
+  background-color: #10a7be;
+  color: #fff;
 }
