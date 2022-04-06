@@ -10,18 +10,6 @@ const Mission = (mission) => {
     joined,
   } = mission;
 
-  // const handleSubmit = (e) => {
-  //   if (!joined) {
-  //     e.target.classList.remove('leave');
-  //     e.target.classList.add('joined');
-  //     joinMission(id);
-  //   } else {
-  //     e.target.classList.remove('joined');
-  //     e.target.classList.add('leave');
-  //     leaveMission(id);
-  //   }
-  // };
-
   return (
     <tr key={id}>
       <td>{name}</td>
@@ -39,13 +27,6 @@ const Mission = (mission) => {
         )}
       </td>
       <td>
-        {/* <button
-          className="btn"
-          onClick={handleSubmit}
-          type="button"
-        >
-          {joined ? 'Leave Mission' : 'Join Mission'}
-        </button> */}
         {!joined && (
           <button type="submit" className="memberBtn join-mission" onClick={() => joinMission(id)}>
             Join Mission
