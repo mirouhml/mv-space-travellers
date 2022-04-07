@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Mission renders correctly 1`] = `
+<tr>
+  <td
+    className="bold-text"
+  >
+    name
+  </td>
+  <td>
+    desc
+  </td>
+  <td>
+    <button
+      className="member-btn non-member"
+      type="submit"
+    >
+      Not a Member
+    </button>
+  </td>
+  <td>
+    <button
+      className="mission-btn join-mission"
+      onClick={[Function]}
+      type="submit"
+    >
+      Join Mission
+    </button>
+  </td>
+</tr>
+`;
+
+exports[`Rocket component tests: Component renders correctly 1`] = `
+<tr>
+  <td
+    className="bold-text"
+  >
+    Rocket 1
+  </td>
+  <td>
+    rocket-description-1
+  </td>
+  <td>
+    <button
+      className="member-btn non-member"
+      type="submit"
+    >
+      Not a Member
+    </button>
+  </td>
+  <td>
+    <button
+      className="mission-btn join-mission"
+      onClick={[Function]}
+      type="submit"
+    >
+      Join Mission
+    </button>
+  </td>
+</tr>
+`;
+
+exports[`missions component tests: Component renders correctly 1`] = `
+<tr>
+  <td
+    className="bold-text"
+  >
+    mission 1
+  </td>
+  <td>
+    mission-description-1
+  </td>
+  <td>
+    <button
+      className="member-btn non-member"
+      type="submit"
+    >
+      Not a Member
+    </button>
+  </td>
+  <td>
+    <button
+      className="mission-btn join-mission"
+      onClick={[Function]}
+      type="submit"
+    >
+      Join Mission
+    </button>
+  </td>
+</tr>
+`;
