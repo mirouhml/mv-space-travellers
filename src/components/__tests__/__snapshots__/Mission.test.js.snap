@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Mission renders correctly 1`] = `
+Array [
+ <tr>
+    <td>description</td>
+    <td>
+        <button className="member-btn active-member">
+            Active Member
+        </button>
+    </td> 
+     <td>
+        <button className="member-btn non-member">
+            Not a Member
+        </button>
+    </td>
+      <td>
+        <button className="mission-btn join-mission">
+            Join Mission
+        </button>
+    </td>
+      <td>
+        <button className="mission-btn leave-mission">
+            Leave Mission
+        </button>
+    </td>
+
+ </tr>
+]
+`;
+
+exports[`OneMission renders correctly 1`] = `
+<tr>
+  <td
+    className="bold-text"
+  >
+    name
+  </td>
+  <td>
+    desc
+  </td>
+  <td>
+    <button
+      className="member-btn non-member"
+      type="submit"
+    >
+      Not a Member
+    </button>
+  </td>
+  <td>
+    <button
+      className="mission-btn join-mission"
+      onClick={[Function]}
+      type="submit"
+    >
+      Join Mission
+    </button>
+  </td>
+</tr>
+`;
