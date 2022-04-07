@@ -23,7 +23,7 @@ describe('Navigator component tests:', () => {
     const { container } = render(
       <Provider store={store}>
         <App />
-      </Provider>
+      </Provider>,
     );
     const home = container.querySelector('.header');
     expect(home).toBeInTheDocument();
@@ -33,7 +33,7 @@ describe('Navigator component tests:', () => {
     const { container } = render(
       <Provider store={store}>
         <App />
-      </Provider>
+      </Provider>,
     );
     const page = container.querySelector('#rockets');
     expect(page).toBeInTheDocument();
@@ -43,7 +43,7 @@ describe('Navigator component tests:', () => {
     const { container } = render(
       <Provider store={store}>
         <App />
-      </Provider>
+      </Provider>,
     );
     fireEvent.click(screen.getByText('Rockets'));
     const page = container.querySelector('.rockets');
@@ -54,7 +54,7 @@ describe('Navigator component tests:', () => {
     const { container } = render(
       <Provider store={store}>
         <App />
-      </Provider>
+      </Provider>,
     );
     fireEvent.click(screen.getByText('Missions'));
     const page = container.querySelector('.missions');
@@ -65,7 +65,7 @@ describe('Navigator component tests:', () => {
     const { container } = render(
       <Provider store={store}>
         <App />
-      </Provider>
+      </Provider>,
     );
     fireEvent.click(screen.getByText('My Profile'));
     const page = container.querySelector('.profile');
