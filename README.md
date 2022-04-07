@@ -2,7 +2,7 @@
 
 # Space Travellers' Hub
 
-This is a website about space missions and rockets.
+This is a web application for a company that provides commercial and scientific space travel services. The application will use real live data from the SpaceX API, and it will allow users to book rockets and join selected space missions.
 
 ![localhost_3000_mv-space-travellers](https://user-images.githubusercontent.com/20567503/162003030-067de73b-d04e-40ec-a8f8-65e2993db821.png)
 ![localhost_3000_mv-space-travellers (1)](https://user-images.githubusercontent.com/20567503/162003017-27cb5eba-e497-43b6-81c1-00cce2d7ffdc.png)
