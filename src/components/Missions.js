@@ -1,29 +1,13 @@
-import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import React from 'react';
+import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
-import { getMissions, joinMission, leaveMission } from '../redux/missions/missions';
+import { joinMission, leaveMission } from '../redux/missions/missions';
 import Mission from './Mission';
 import './missions.css';
 
 const Missions = (props) => {
-  const { missions, setMissions } = props;
-  const missionsInit = useSelector((state) => state.missions);
+  const { missions } = props;
   const dispatch = useDispatch();
-
-  useEffect(() => {
-    const { missionsFetched, setMissionsFetched } = props;
-    if (!missionsFetched) {
-      dispatch(getMissions());
-      setMissionsFetched(true);
-    }
-  }, [dispatch, props]);
-
-  useEffect(() => {
-    const { missionsFetched } = props;
-    if (missionsFetched) {
-      setMissions(missionsInit);
-    }
-  }, [missionsInit, props]);
 
   const joinMissionAction = (id) => {
     dispatch(joinMission(id));
@@ -63,15 +47,12 @@ const Missions = (props) => {
 };
 
 Missions.propTypes = {
-  missionsFetched: PropTypes.bool.isRequired,
-  setMissionsFetched: PropTypes.func.isRequired,
   missions: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
     joined: PropTypes.bool.isRequired,
   })).isRequired,
-  setMissions: PropTypes.func.isRequired,
 };
 
 export default Missions;
