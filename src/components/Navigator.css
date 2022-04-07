@@ -13,15 +13,11 @@
   gap: 1rem;
 }
 
-.inactive {
-  text-decoration: none;
-}
-
-.active {
+nav .active {
   text-decoration: underline;
 }
 
-.link {
+nav a {
   text-decoration: none;
   color: rgb(70, 147, 240);
 }
