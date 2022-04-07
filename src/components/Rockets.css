@@ -1,0 +1,16 @@
+.rockets {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.rocket-item {
+  width: 90%;
+  box-sizing: border-box;
+}

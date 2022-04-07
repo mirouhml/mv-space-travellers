@@ -1,0 +1,58 @@
+.rocket {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 20% 80%;
+  gap: 1rem;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.rocket-image {
+  width: 100%;
+}
+
+.rocket-name {
+  margin: 0;
+}
+
+.rocket-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.rocket-button {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  width: fit-content;
+}
+
+.unclicked {
+  background-color: #4949f9;
+  color: white;
+  border: 1px solid #4949f9;
+}
+
+.clicked {
+  background-color: white;
+  color: #6e757c;
+  border: 1px solid #6e757c;
+}
+
+.rocket-description-container {
+  display: flex;
+  padding: 0.5rem 0;
+}
+
+.rocket-description {
+  margin: 0;
+}
+
+.rocket-badge {
+  padding: 0.1rem 0.2rem;
+  background-color: #1693a7;
+  border-radius: 5px;
+  color: white;
+  font-size: 0.8rem;
+  margin-right: 0.5rem;
+}

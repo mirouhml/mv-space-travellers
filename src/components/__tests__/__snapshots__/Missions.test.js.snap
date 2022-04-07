@@ -1,0 +1,123 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Missions component tests: Missions component renders correctly 1`] = `
+<table
+  className="missions"
+>
+  <thead>
+    <tr>
+      <th
+        className="bold-text"
+      >
+        Mission
+      </th>
+      <th
+        className="bold-text"
+      >
+        Description
+      </th>
+      <th
+        className="bold-text"
+      >
+        Status
+      </th>
+      <th>
+         
+      </th>
+    </tr>
+  </thead>
+  <tbody
+    className="mission-item"
+  >
+    <tr>
+      <td
+        className="bold-text"
+      >
+        mission 1
+      </td>
+      <td>
+        mission-description-1
+      </td>
+      <td>
+        <button
+          className="member-btn non-member"
+          type="submit"
+        >
+          Not a Member
+        </button>
+      </td>
+      <td>
+        <button
+          className="mission-btn join-mission"
+          onClick={[Function]}
+          type="submit"
+        >
+          Join Mission
+        </button>
+      </td>
+    </tr>
+  </tbody>
+  <tbody
+    className="mission-item"
+  >
+    <tr>
+      <td
+        className="bold-text"
+      >
+        mission 2
+      </td>
+      <td>
+        mission-description-2
+      </td>
+      <td>
+        <button
+          className="member-btn non-member"
+          type="submit"
+        >
+          Not a Member
+        </button>
+      </td>
+      <td>
+        <button
+          className="mission-btn join-mission"
+          onClick={[Function]}
+          type="submit"
+        >
+          Join Mission
+        </button>
+      </td>
+    </tr>
+  </tbody>
+  <tbody
+    className="mission-item"
+  >
+    <tr>
+      <td
+        className="bold-text"
+      >
+        mission 3
+      </td>
+      <td>
+        mission-description-3
+      </td>
+      <td>
+        <button
+          className="member-btn non-member"
+          type="submit"
+        >
+          Not a Member
+        </button>
+      </td>
+      <td>
+        <button
+          className="mission-btn join-mission"
+          onClick={[Function]}
+          type="submit"
+        >
+          Join Mission
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
