@@ -129,4 +129,14 @@ describe('Rocket component tests:', () => {
     fireEvent.click(screen.getAllByText('Reserve Rocket')[0]);
     expect(screen.getByText('Cancel Reservation')).toBeInTheDocument();
   });
+
+  it('Cancel reservation for the first rocket correctly', () => {
+    render(
+      <Provider store={store}>
+        <App />
+      </Provider>
+    );
+    fireEvent.click(screen.getAllByText('Cancel Reservation')[0]);
+    expect(store.getState().rockets[0].reserved).toEqual(false);
+  });
 });
