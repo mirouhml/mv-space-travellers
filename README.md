@@ -4,6 +4,11 @@
 
 This is a web application for a company that provides commercial and scientific space travel services. The application will use real live data from the SpaceX API, and it will allow users to book rockets and join selected space missions.
 
+The data for this website is fetched from the following:
+- Rockets: https://api.spacexdata.com/v3/rockets
+- Missions: https://api.spacexdata.com/v3/missions
+
+## Screenshots
 ![localhost_3000_mv-space-travellers](https://user-images.githubusercontent.com/20567503/162003030-067de73b-d04e-40ec-a8f8-65e2993db821.png)
 ![localhost_3000_mv-space-travellers (1)](https://user-images.githubusercontent.com/20567503/162003017-27cb5eba-e497-43b6-81c1-00cce2d7ffdc.png)
 ![localhost_3000_mv-space-travellers (2)](https://user-images.githubusercontent.com/20567503/162003008-0cf070ea-001f-4592-bc40-7e9849471167.png)
