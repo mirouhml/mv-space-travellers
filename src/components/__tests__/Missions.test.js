@@ -53,7 +53,7 @@ describe('Missions component tests:', () => {
     expect(missionsPage).toMatchSnapshot();
   });
 
-  it('Number of rocket elements displayed should be 3', () => {
+  it('Number of missions displayed should be 3', () => {
     const { container } = render(
       <Provider store={store}>
         <Missions missions={mockMissionsData} />

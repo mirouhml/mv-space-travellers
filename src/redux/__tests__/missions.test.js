@@ -46,7 +46,7 @@ describe('Tests for missions redux file:', () => {
     expect(store.getState().length).toEqual(3);
   });
 
-  it('join one mission', () => {
+  it('Join one mission', () => {
     store.dispatch(mockGetMissions());
     store.dispatch(joinMission('mission-1'));
     let missionsArray = store.getState();
@@ -54,7 +54,7 @@ describe('Tests for missions redux file:', () => {
     expect(missionsArray.length).toEqual(1);
   });
 
-  it('join three missions', () => {
+  it('Join three missions', () => {
     store.dispatch(mockGetMissions());
     store.dispatch(joinMission('mission-1'));
     store.dispatch(joinMission('mission-2'));
@@ -64,7 +64,7 @@ describe('Tests for missions redux file:', () => {
     expect(missionsArray.length).toEqual(3);
   });
 
-  it('Cancel reservation for one mission', () => {
+  it('Disconnect from one mission', () => {
     store.dispatch(mockGetMissions());
     store.dispatch(joinMission('mission-1'));
     store.dispatch(joinMission('mission-2'));
@@ -75,7 +75,7 @@ describe('Tests for missions redux file:', () => {
     expect(missionsArray[0].id).toEqual('mission-2');
   });
 
-  it('Cancel reservation for three missions', () => {
+  it('Disconnect from three missions', () => {
     store.dispatch(mockGetMissions());
     store.dispatch(joinMission('mission-1'));
     store.dispatch(joinMission('mission-2'));
