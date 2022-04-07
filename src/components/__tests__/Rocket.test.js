@@ -8,33 +8,33 @@ import thunk from 'redux-thunk';
 import rocketsReducer from '../../redux/rockets/rockets';
 import missionsReducer from '../../redux/missions/missions';
 import Rocket from '../Rocket';
-import Rockets from '../Rockets';
+// import Rockets from '../Rockets';
 import App from '../../App';
 
 const mockRocketsData = [
   {
-    id: "rocket-1",
-    image: "rocket-image-1",
-    name: "Rocket 1",
-    description: "rocket-description-1",
+    id: 'rocket-1',
+    image: 'rocket-image-1',
+    name: 'Rocket 1',
+    description: 'rocket-description-1',
     reserved: false,
-    wikipedia: "rocket-link-1",
+    wikipedia: 'rocket-link-1',
   },
   {
-    id: "rocket-2",
-    image: "rocket-image-2",
-    name: "Rocket 2",
-    description: "rocket-description-2",
+    id: 'rocket-2',
+    image: 'rocket-image-2',
+    name: 'Rocket 2',
+    description: 'rocket-description-2',
     reserved: false,
-    wikipedia: "rocket-link-2",
+    wikipedia: 'rocket-link-2',
   },
   {
-    id: "rocket-3",
-    image: "rocket-image-3",
-    name: "Rocket 3",
-    description: "rocket-description-3",
+    id: 'rocket-3',
+    image: 'rocket-image-3',
+    name: 'Rocket 3',
+    description: 'rocket-description-3',
     reserved: false,
-    wikipedia: "rocket-link-3",
+    wikipedia: 'rocket-link-3',
   },
 ];
 
@@ -85,7 +85,7 @@ describe('Rocket component tests:', () => {
         reserveRocket={reserveRocketAction}
         cancelReservation={cancelReservationAction}
         reserved={mockRocketsData[0].reserved}
-      />
+      />,
     );
     const name = container.querySelector('.rocket-name');
     expect(name.textContent).toEqual(mockRocketsData[0].name);
@@ -103,7 +103,7 @@ describe('Rocket component tests:', () => {
         reserveRocket={reserveRocketAction}
         cancelReservation={cancelReservationAction}
         reserved={mockRocketsData[0].reserved}
-      />
+      />,
     );
     const image = container.querySelector('.rocket-image');
     expect(image.src).toEqual(`http://localhost/${mockRocketsData[0].image}`);
@@ -113,7 +113,7 @@ describe('Rocket component tests:', () => {
     render(
       <Provider store={store}>
         <App />
-      </Provider>
+      </Provider>,
     );
     fireEvent.click(screen.getAllByText('Reserve Rocket')[0]);
     expect(screen.getByText('Reserved')).toBeInTheDocument();
@@ -123,7 +123,7 @@ describe('Rocket component tests:', () => {
     render(
       <Provider store={store}>
         <App />
-      </Provider>
+      </Provider>,
     );
     fireEvent.click(screen.getAllByText('Cancel Reservation')[0]);
     fireEvent.click(screen.getAllByText('Reserve Rocket')[0]);
@@ -134,7 +134,7 @@ describe('Rocket component tests:', () => {
     render(
       <Provider store={store}>
         <App />
-      </Provider>
+      </Provider>,
     );
     fireEvent.click(screen.getAllByText('Cancel Reservation')[0]);
     expect(store.getState().rockets[0].reserved).toEqual(false);

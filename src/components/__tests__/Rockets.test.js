@@ -1,4 +1,4 @@
-import { screen, render, fireEvent } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import React from 'react';
 import { Provider } from 'react-redux';
@@ -11,28 +11,28 @@ import Rockets from '../Rockets';
 
 const mockRocketsData = [
   {
-    id: "rocket-1",
-    image: "rocket-image-1",
-    name: "Rocket 1",
-    description: "rocket-description-1",
+    id: 'rocket-1',
+    image: 'rocket-image-1',
+    name: 'Rocket 1',
+    description: 'rocket-description-1',
     reserved: false,
-    wikipedia: "rocket-link-1",
+    wikipedia: 'rocket-link-1',
   },
   {
-    id: "rocket-2",
-    image: "rocket-image-2",
-    name: "Rocket 2",
-    description: "rocket-description-2",
+    id: 'rocket-2',
+    image: 'rocket-image-2',
+    name: 'Rocket 2',
+    description: 'rocket-description-2',
     reserved: false,
-    wikipedia: "rocket-link-2",
+    wikipedia: 'rocket-link-2',
   },
   {
-    id: "rocket-3",
-    image: "rocket-image-3",
-    name: "Rocket 3",
-    description: "rocket-description-3",
+    id: 'rocket-3',
+    image: 'rocket-image-3',
+    name: 'Rocket 3',
+    description: 'rocket-description-3',
     reserved: false,
-    wikipedia: "rocket-link-3",
+    wikipedia: 'rocket-link-3',
   },
 ];
 
@@ -60,7 +60,7 @@ describe('Rockets component tests:', () => {
     const { container } = render(
       <Provider store={store}>
         <Rockets rockets={mockRocketsData} />
-      </Provider>
+      </Provider>,
     );
     const page = container.querySelector('.rockets');
     expect(page.childElementCount).toBe(3);
