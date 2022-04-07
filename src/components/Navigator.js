@@ -1,10 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import {
   Route,
   Routes,
   Link,
   useLocation,
 } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+import { getRockets } from '../redux/rockets/rockets';
+import { getMissions } from '../redux/missions/missions';
 import Profile from './Profile';
 import Rockets from './Rockets';
 import Missions from './Missions';
@@ -21,29 +24,36 @@ const toggleActive = (e) => {
 };
 
 const Navigator = () => {
-  const [rockets, setRockets] = useState([]);
-  const [missions, setMissions] = useState([]);
-  const [rocketsFetched, setRocketsFetched] = useState(false);
-  const [missionsFetched, setMissionsFetched] = useState(false);
+  const rockets = useSelector((state) => state.rockets);
+  const missions = useSelector((state) => state.missions);
   const location = useLocation();
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    switch (location.pathname) {
-      case '/profile':
-        document.getElementById('profile').className = 'active';
-        document.getElementById('missions').className = 'inactive';
-        document.getElementById('rockets').className = 'inactive';
-        break;
-      case '/mission':
-        document.getElementById('missions').className = 'active';
-        document.getElementById('rockets').className = 'inactive';
-        document.getElementById('profile').className = 'inactive';
-        break;
-      default:
-        document.getElementById('rockets').className = 'active';
-        document.getElementById('profile').className = 'inactive';
-        document.getElementById('missions').className = 'inactive';
+    const profile = document.getElementById('profile');
+    const missions = document.getElementById('missions');
+    const rockets = document.getElementById('rockets');
+
+    if (profile && missions && rockets) {
+      switch (location.pathname) {
+        case '/profile':
+          profile.className = 'active';
+          missions.className = 'inactive';
+          rockets.className = 'inactive';
+          break;
+        case '/mission':
+          missions.className = 'active';
+          rockets.className = 'inactive';
+          profile.className = 'inactive';
+          break;
+        default:
+          rockets.className = 'active';
+          profile.className = 'inactive';
+          missions.className = 'inactive';
+      }
     }
+    dispatch(getRockets());
+    dispatch(getMissions());
   }, []);
 
   return (
@@ -68,8 +78,8 @@ const Navigator = () => {
       </div>
       <Routes>
         <Route path="/profile" element={<Profile missions={missions} rockets={rockets} />} />
-        <Route path="/" element={<Rockets rocketsFetched={rocketsFetched} setRocketsFetched={setRocketsFetched} rockets={rockets} setRockets={setRockets} />} />
-        <Route path="/mission" element={<Missions missions={missions} setMissions={setMissions} missionsFetched={missionsFetched} setMissionsFetched={setMissionsFetched} />} />
+        <Route path="/" element={<Rockets rockets={rockets} />} />
+        <Route path="/mission" element={<Missions missions={missions} />} />
       </Routes>
     </div>
   );
