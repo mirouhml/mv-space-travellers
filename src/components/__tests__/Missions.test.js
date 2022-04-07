@@ -47,7 +47,7 @@ describe('Missions component tests:', () => {
   it('Missions component renders correctly', () => {
     const missionsPage = renderer.create(
       <Provider store={store}>
-        <Missions rockets={mockMissionsData} />
+        <Missions missions={mockMissionsData} />
       </Provider>,
     ).toJSON();
     expect(missionsPage).toMatchSnapshot();
@@ -56,10 +56,10 @@ describe('Missions component tests:', () => {
   it('Number of rocket elements displayed should be 3', () => {
     const { container } = render(
       <Provider store={store}>
-        <Missions rockets={mockMissionsData} />
+        <Missions missions={mockMissionsData} />
       </Provider>,
     );
     const page = container.querySelector('.missions');
-    expect(page.childElementCount).toBe(3);
+    expect(page.childElementCount).toBe(4);
   });
 });
