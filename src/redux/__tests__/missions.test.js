@@ -64,7 +64,7 @@ describe('Tests for missions redux file:', () => {
     expect(missionsArray.length).toEqual(3);
   });
 
-  it('Disconnect from one mission', () => {
+  it('Leave one mission', () => {
     store.dispatch(mockGetMissions());
     store.dispatch(joinMission('mission-1'));
     store.dispatch(joinMission('mission-2'));
@@ -75,7 +75,7 @@ describe('Tests for missions redux file:', () => {
     expect(missionsArray[0].id).toEqual('mission-2');
   });
 
-  it('Disconnect from three missions', () => {
+  it('Leave three missions', () => {
     store.dispatch(mockGetMissions());
     store.dispatch(joinMission('mission-1'));
     store.dispatch(joinMission('mission-2'));
