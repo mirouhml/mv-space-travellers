@@ -73,7 +73,7 @@ describe('Rocket component tests:', () => {
     expect(rocket).toMatchSnapshot();
   });
 
-  it('Display name of rocket correctly', () => {
+  it('Display name of the rocket correctly', () => {
     const reserveRocketAction = jest.fn();
     const cancelReservationAction = jest.fn();
     const { container } = render(
@@ -91,7 +91,7 @@ describe('Rocket component tests:', () => {
     expect(name.textContent).toEqual(mockRocketsData[0].name);
   });
 
-  it('Display image of rocket correctly', () => {
+  it('Display image of the rocket correctly', () => {
     const reserveRocketAction = jest.fn();
     const cancelReservationAction = jest.fn();
     const { container } = render(
